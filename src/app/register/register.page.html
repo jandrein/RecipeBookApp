@@ -1,0 +1,65 @@
+<ion-content>
+
+    <ion-grid class="grid1">
+
+        <ion-row class="row1">
+            <ion-col>
+                <ion-col>
+                    <h1>REGISTER</h1>
+                </ion-col>
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="row2">
+            <ion-col>
+
+            </ion-col>
+        </ion-row>
+
+    </ion-grid>
+
+    <ion-slide>
+        <div class="contaier-login">
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <ion-list>
+                            <form [formGroup]="postForm" (ngSubmit)="login()" color='success'></form>
+                            <ion-item>
+                                <ion-icon name="person" class="icon-login"></ion-icon>
+                                <ion-label position="floating">Email</ion-label>
+                                <ion-input type="email" [(ngModel)]="email"></ion-input>
+                            </ion-item>
+                            <br />
+                            <ion-item>
+                                <ion-icon name="key-outline"></ion-icon>
+                                <ion-label position="floating">Password</ion-label>
+                                <ion-input type="password" [(ngModel)]="password"></ion-input>
+                            </ion-item>
+                            <ion-item>
+                                <ion-icon name="key-outline"></ion-icon>
+                                <ion-label position="floating">Confirm Password</ion-label>
+                                <ion-input type="password" [(ngModel)]="cpassword"></ion-input>
+                            </ion-item>
+                            <ion-item>
+                                <ion-icon name="person-add-outline"></ion-icon>
+                                <ion-label position="floating">Name</ion-label>
+                                <ion-input type="text" [(ngModel)]="name"></ion-input>
+                            </ion-item>
+
+                        </ion-list>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-button type="submit" fill="solid" expand="full" (click)="register()">
+                            Register
+                        </ion-button>
+                        <ion-button type="submit" fill="solid" expand="full" (click)="goToLogin()">
+                            Login
+                        </ion-button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </ion-slide>

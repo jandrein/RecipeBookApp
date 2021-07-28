@@ -1,0 +1,119 @@
+<ion-header>
+    <ion-toolbar>
+        <h1>Upload Recipes</h1>
+    </ion-toolbar>
+</ion-header>
+
+<!-- <ion-content>
+    <ion-card align-self: stretch>
+        <form [formGroup]="postForm" (ngSubmit)="createRecipe()" color='success'>
+
+
+            <ion-item>
+                <ion-label position="floating">Recipe</ion-label>
+                <ion-input type="text" formControlName="recipe"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Category</ion-label>
+                <ion-select value="Select Category" formControlName="categ" okText="Okay" cancelText="Dismiss">
+                    <ion-select-option value="Breakfast">Breakfast</ion-select-option>
+                    <ion-select-option value="Lunch">Lunch</ion-select-option>
+                    <ion-select-option value="Dinner">Dinner</ion-select-option>
+                    <ion-select-option value="Drinks">Drinks</ion-select-option>
+                    <ion-select-option value="Dessert">Dessert</ion-select-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Ingredients</ion-label>
+                <ion-input type="text" formControlName="ingred"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Intructions</ion-label>
+                <ion-input type="text" formControlName="instruc"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Your Email</ion-label>
+                <ion-input type="text" formControlName="email"></ion-input>
+            </ion-item>
+
+
+
+            <ion-button fill="solid" expand="block" color="dark" (click)="createRecipe()">
+                <ion-icon size="small" slot="icon-only" name="add"></ion-icon>Upload &nbsp;
+            </ion-button>
+        </form>
+    </ion-card>
+</ion-content> -->
+<ion-content>
+
+    <ion-grid class="grid1">
+
+        <ion-row class="row1">
+            <ion-col>
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="row2">
+            <ion-col>
+
+            </ion-col>
+        </ion-row>
+
+    </ion-grid>
+
+    <ion-slide>
+        <div class="contaier-login">
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <ion-list>
+                            <form [formGroup]="postForm" (ngSubmit)="createRecipe()" color='success'>
+
+
+                                <ion-item>
+                                    <ion-label position="floating">Recipe</ion-label>
+                                    <ion-input type="text" formControlName="recipe"></ion-input>
+                                </ion-item>
+
+                                <ion-item>
+                                    <ion-label>Category</ion-label>
+                                    <ion-select value="Select Category" formControlName="categ" okText="Okay" cancelText="Dismiss">
+                                        <ion-select-option value="Breakfast">Breakfast</ion-select-option>
+                                        <ion-select-option value="Lunch">Lunch</ion-select-option>
+                                        <ion-select-option value="Dinner">Dinner</ion-select-option>
+                                        <ion-select-option value="Drinks">Drinks</ion-select-option>
+                                        <ion-select-option value="Dessert">Dessert</ion-select-option>
+                                    </ion-select>
+                                </ion-item>
+
+                                <ion-item>
+                                    <ion-label position="floating">Ingredients</ion-label>
+                                    <ion-input type="text" formControlName="ingred"></ion-input>
+                                </ion-item>
+
+                                <ion-item>
+                                    <ion-label position="floating">Intructions</ion-label>
+                                    <ion-input type="text" formControlName="instruc"></ion-input>
+                                </ion-item>
+
+                                <ion-item>
+                                    <ion-label position="floating">Your Email</ion-label>
+                                    <ion-input type="text" formControlName="email"></ion-input>
+                                </ion-item>
+
+
+
+                                <ion-button fill="solid" expand="block" color="dark" (click)="createRecipe()">
+                                    <ion-icon size="small" slot="icon-only" name="add"></ion-icon>Upload &nbsp;
+                                </ion-button>
+                            </form>
+                        </ion-list>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </ion-slide>

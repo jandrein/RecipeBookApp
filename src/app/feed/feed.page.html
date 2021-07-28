@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Recipes</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-searchbar placeholder='Search' [(ngModel)]="searchTerm" showCancelButton="focus" animated>
+
+
+    </ion-searchbar>
+    <ion-card *ngFor="let item of postList | filter:searchTerm">
+        <span *ngIf="!item.isEdit; else elseBlock">
+        <ion-card-header>
+          <ion-card-title>
+              <ion-icon name="restaurant-outline"></ion-icon>
+              {{item.recipe}}</ion-card-title>
+          <ion-card-subtitle>By: {{item.email}}</ion-card-subtitle>
+          <ion-card-subtitle>Category: {{item.categ}}</ion-card-subtitle>
+          <ion-card-subtitle>Ingredients: {{item.ingred}}</ion-card-subtitle>
+          <ion-card-subtitle>Instructions: {{item.instruc}}</ion-card-subtitle>
+        </ion-card-header>
+      </span>
+    </ion-card>
+</ion-content>

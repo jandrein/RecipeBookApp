@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>My Recipes</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-searchbar placeholder='Search' [(ngModel)]="searchTerm" showCancelButton="focus" animated>
+
+
+    </ion-searchbar>
+
+    <ion-card *ngFor="let item of postUpload">
+
+        <span *ngIf="!item.isEdit; else elseBlock">
+    
+          <ion-card-header>
+            <ion-card-title>Recipe: {{item.recipe}}</ion-card-title>
+            <ion-card-subtitle>Category: {{item.categ}}</ion-card-subtitle>
+            <ion-card-subtitle>Ingredients: {{item.ingred}}</ion-card-subtitle>
+            <ion-card-subtitle>Instructions: {{item.instruc}}</ion-card-subtitle>
+          </ion-card-header>
+          
+          <ion-card-content>
+            <ion-button shape="round" color="danger" size="small" (click)="RemovePost(item.id)">
+              <ion-icon size="small" slot="icon-only" name="trash"></ion-icon>
+            </ion-button>
+    
+          </ion-card-content>
+
+        </span>
+    </ion-card>
+    <ion-button shape="square" color="danger" class="logoutbutton" (click)="logOut()">Logout</ion-button>
+</ion-content>
